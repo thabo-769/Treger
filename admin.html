@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0f12" />
+  <title>Treger | Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/images/favicon.png" type="image/png" />
+  <script>
+    (function(){
+      try{
+        var t=localStorage.getItem('treger_dash_theme')||localStorage.getItem('treger_theme');
+        if(t==='light')document.documentElement.setAttribute('data-theme','light');
+      }catch(e){}
+    })();
+  </script>
+</head>
+<body class="dashboard-shell" data-role="admin">
+  <div id="dashboardApp"></div>
+  <script type="module" src="/src/dashboard.ts"></script>
+</body>
+</html>

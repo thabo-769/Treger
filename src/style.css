@@ -79,3 +79,24 @@ body{ font-family:Inter,system-ui,sans-serif; background:#fff; color:#0A0A0B; ov
 /* grid fade */
 #productGrid{ transition:opacity .3s ease, transform .3s ease; }
 #productGrid.switching{ opacity:0; transform:translateY(12px); }
+
+/* Site Modals & Dialogs */
+.site-modal-overlay{ position:fixed; inset:0; background:rgba(0,0,0,.78); backdrop-filter:blur(8px); display:none; place-items:center; padding:16px; z-index:150; overflow-y:auto; }
+.site-modal-overlay.open{ display:grid; }
+.site-modal-card{ width:100%; max-width:600px; background:#fff; color:#0a0a0b; border-radius:18px; box-shadow:0 30px 80px rgba(0,0,0,.35); overflow:hidden; animation:siteModalIn .25s cubic-bezier(.16,1,.3,1); }
+.site-modal-card.dark{ background:#111113; color:#f5f6f8; border:1px solid #272c33; }
+@keyframes siteModalIn{ from{ opacity:0; transform:scale(.94) translateY(12px); } to{ opacity:1; transform:none; } }
+.site-modal-header{ display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid rgba(0,0,0,.08); }
+.site-modal-card.dark .site-modal-header{ border-bottom-color:#23272f; }
+.site-modal-body{ padding:24px; max-height:calc(85vh - 130px); overflow-y:auto; }
+.site-modal-footer{ display:flex; align-items:center; justify-content:flex-end; gap:10px; padding:16px 24px; border-top:1px solid rgba(0,0,0,.08); background:rgba(0,0,0,.02); }
+.site-modal-card.dark .site-modal-footer{ border-top-color:#23272f; background:#0c0d10; }
+
+/* Store Locator Cards */
+.store-card{ background:#16161a; border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:16px; transition:border-color .2s, transform .2s; }
+.store-card:hover{ border-color:var(--treger); transform:translateY(-2px); }
+
+/* Product clickable hover */
+.p-card{ cursor:pointer; }
+
+
